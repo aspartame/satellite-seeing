@@ -1,4 +1,4 @@
-Google Maps Boilerplate
+Satellite Seeing
 ======
 
-Base for building Google Maps mashups.
+Discover cool and beautiful places around the world by satellite.
