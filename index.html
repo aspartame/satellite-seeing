@@ -6,14 +6,17 @@
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	
 	<!-- Don't forget to fill in your own Google Maps API key! -->
-	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyD2WOsIpfCAV7w3qUNwpdLA5mqSACvIvu8"></script>
 	
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/vendor/knockout.js"></script>
 	<script type="text/javascript" src="js/vendor/less-1.4.1.min.js"></script>
 	<script type="text/javascript" src="js/vendor/moment.min.js"></script>
-	<script type="text/javascript" src="js/mapViewModel.js"></script>
-	<script type="text/javascript" src="js/init.js"></script>
+	<script type="text/javascript" src="js/vendor/lodash.min.js"></script>
+	<script type="text/javascript" src="js/ss.1.js"></script>
+	<script type="text/javascript" src="js/ss.data.js"></script>
+	<script type="text/javascript" src="js/ss.vm.map.js"></script>
+	<script type="text/javascript" src="js/ss.m.pointOfInterest.js"></script>
 </head>
 <body>
 	<div class="loading-container" data-bind="visible: isBusy">
@@ -24,23 +27,21 @@
 	</div>
 	<div id="map-canvas"></div>
 	<div class="overlay" data-bind="visible: !isBusy()">
-		<div class="overlay--header">
-			Overlay header
-		</div>
-		<div class="overlay--details">
-			Overlay details
+		<div class="title" data-bind="text: currentPoi().title"></div>
+		<div class="description">
+			<i class="fa fa-map-marker"></i><span data-bind="text: currentPoi().description"></span>
 		</div>
 	</div>
 	
 	<!-- Google Analytics. Just fill in your tracking ID below  -->
 	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'YOUR_TRACKING_ID', 'auto');
-	ga('send', 'pageview');
+	// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+// 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+//
+// 	ga('create', 'YOUR_TRACKING_ID', 'auto');
+// 	ga('send', 'pageview');
 	</script>
 </body>
 </html>

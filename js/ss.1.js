@@ -1,5 +1,7 @@
+var ss = ss || {};
+
 $(document).ready(function() {
-	var map = new mapViewModel();
+	var map = new ss.vm.map();
 
 	map.isBusy(true);
 
