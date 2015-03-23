@@ -1,13 +1,33 @@
 ss.data = [
+	// {
+// 		"center": {
+// 			"lat": 38.0455212,
+// 			"lng": -101.0184954
+// 		},
+// 		"zoomLevel": 13,
+// 		"title": "",
+// 		"description": "",
+// 		"location": "",
+// 	},
+	{
+		"center": {
+			"lat": 38.4823949,
+			"lng": -109.6793272
+		},
+		"zoomLevel": 14,
+		"title": "TexasGulf Potash Ponds",
+		"description": "Outside Moab, Utah",
+		"location": "Outside Moab, Utah",
+	},
 	{
 		"center": {
 			"lat": 32.1523819,
 			"lng": -110.8323175
 		},
 		"zoomLevel": 17,
-		"title": "Airplane Graveyard",
+		"title": "Airplane Boneyard",
 		"description": "Tucson, Arizona",
-		"location": "Tucson, Arizona"
+		"location": "Tucson, Arizona",
 	},
 	{
 		"center": {
@@ -30,3 +50,4 @@ ss.data = [
 		"location": "Sahara Desert, Niger"
 	}
 ];
+

@@ -38,11 +38,11 @@ ss.vm.map = function() {
 			
 			setCurrentPoi(_pois[0]);
 			
-			window.setInterval(function () {
-				var currentIndex = _pois.indexOf(_currentPoi());
-				var next = (currentIndex + 1) % _pois.length;
-				setCurrentPoi(_pois[next]);
-			}, 10000);
+			// window.setInterval(function () {
+// 				var currentIndex = _pois.indexOf(_currentPoi());
+// 				var next = (currentIndex + 1) % _pois.length;
+// 				setCurrentPoi(_pois[next]);
+// 			}, 10000);
 			
 			onLoaded();
 		});
