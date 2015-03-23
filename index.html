@@ -25,14 +25,24 @@
 			<div class="spinner-label">Loading...</div>
 		</div>
 	</div>
+	<!-- ko ifnot: isAutoplay() -->
 	<a href="#" class="navigate navigate-previous" data-bind="click: previous, visible: hasPrevious()"><i class="fa fa-angle-left"></i></a>
 	<a href="#" class="navigate navigate-next" data-bind="click: next"><i class="fa fa-angle-right"></i></a>
+	<!-- /ko -->
 	<div id="map-canvas"></div>
 	<div class="overlay" data-bind="visible: !isBusy()">
 		<div class="title" data-bind="text: currentPoi().title"></div>
 		<div class="description">
 			<i class="fa fa-map-marker"></i><span data-bind="text: currentPoi().description"></span>
 		</div>
+		<a href="#" class="autoplay-toggle" data-bind="click: toggleAutoplay">
+			<!-- ko ifnot: isAutoplay() -->
+			<span>start autoplay</span>
+			<!-- /ko -->
+			<!-- ko if: isAutoplay() -->
+			<span>stop autoplay</span>
+			<!-- /ko -->
+		</a>
 	</div>
 	<!-- Google Analytics. Just fill in your tracking ID below  -->
 	<script>

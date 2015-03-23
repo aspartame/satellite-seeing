@@ -6,6 +6,7 @@ ss.vm.map = function() {
 	var _map;
 	var _isBusy = ko.observable(false);
 	var _currentPoi = ko.observable({});
+	var _autoplay = ko.observable(false);
 	var _panAnimation;
 	
 	var _pois = _.map(ss.data, function(poi) {
@@ -49,11 +50,11 @@ ss.vm.map = function() {
 			
 			setCurrentPoi(_pois[0]);
 			
-			// window.setInterval(function () {
-// 				var currentIndex = _pois.indexOf(_currentPoi());
-// 				var next = (currentIndex + 1) % _pois.length;
-// 				setCurrentPoi(_pois[next]);
-// 			}, 10000);
+			window.setInterval(function () {
+ 				if (_autoplay()) { 
+					nextPoi();
+				}
+ 			}, 10000);
 			
 			onLoaded();
 		});
@@ -67,7 +68,15 @@ ss.vm.map = function() {
 	
 	this.hasPrevious = function () {
 		return _pois.indexOf(_currentPoi()) > 0;
-	}
+	};
+	
+	this.isAutoplay = function () {
+		return _autoplay();
+	};
+	
+	this.toggleAutoplay = function () {
+		_autoplay(!_autoplay());
+	};
 	
 	window.poi = this.currentPoi;
 }
