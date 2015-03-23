@@ -34,6 +34,28 @@ body,
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#d9000000',GradientType=0 ); /* IE6-9 */
 }
 
+.navigate {
+	position: fixed;
+	z-index: @zIndex-top;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	color: rgba(0,0,0,0.5);
+	
+	& > .fa {
+		font-size: 100px;
+	}
+	
+	&.navigate-next {
+		right: 20px;
+	}
+	
+	&.navigate-previous {
+		left: 20px;
+	}
+}
+
 .title {
 	font-weight: 100;
 	font-size: 28px;

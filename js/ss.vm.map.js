@@ -20,7 +20,18 @@ ss.vm.map = function() {
 	}
 	
 	function nextPoi() {
+		var currentIndex = _pois.indexOf(_currentPoi());
+		var next = (currentIndex + 1) % _pois.length;
 		
+		setCurrentPoi(_pois[next]);
+	}
+	
+	function previousPoi() {
+		var currentIndex = _pois.indexOf(_currentPoi());
+		
+		if (currentIndex > 0) {
+			setCurrentPoi(_pois[currentIndex - 1]);
+		}
 	}
 	
 	function load(onLoaded) {
@@ -51,5 +62,12 @@ ss.vm.map = function() {
 	this.load = load;
 	this.isBusy = _isBusy;
 	this.currentPoi = _currentPoi;
+	this.next = nextPoi;
+	this.previous = previousPoi;
+	
+	this.hasPrevious = function () {
+		return _pois.indexOf(_currentPoi()) > 0;
+	}
+	
 	window.poi = this.currentPoi;
 }

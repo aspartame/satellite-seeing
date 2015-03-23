@@ -25,6 +25,8 @@
 			<div class="spinner-label">Loading...</div>
 		</div>
 	</div>
+	<a href="#" class="navigate navigate-previous" data-bind="click: previous, visible: hasPrevious()"><i class="fa fa-angle-left"></i></a>
+	<a href="#" class="navigate navigate-next" data-bind="click: next"><i class="fa fa-angle-right"></i></a>
 	<div id="map-canvas"></div>
 	<div class="overlay" data-bind="visible: !isBusy()">
 		<div class="title" data-bind="text: currentPoi().title"></div>
@@ -32,7 +34,6 @@
 			<i class="fa fa-map-marker"></i><span data-bind="text: currentPoi().description"></span>
 		</div>
 	</div>
-	
 	<!-- Google Analytics. Just fill in your tracking ID below  -->
 	<script>
 	// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
