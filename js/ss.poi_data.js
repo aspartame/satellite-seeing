@@ -1,14 +1,14 @@
 ss.data = [
-	// {
-// 		"center": {
-// 			"lat": 38.0455212,
-// 			"lng": -101.0184954
-// 		},
-// 		"zoomLevel": 13,
-// 		"title": "",
-// 		"description": "",
-// 		"location": "",
-// 	},
+	{
+		"center": {
+			"lat": 44.525091, 
+			"lng": -110.838189
+		},
+		"zoomLevel": 19,
+		"title": "Grand Prismatic Spring",
+		"description": "Yellowstone National Park, Wyoming",
+		"location": "Yellowstone National Park, Wyoming",
+	},
 	{
 		"center": {
 			"lat": 38.4823949,
